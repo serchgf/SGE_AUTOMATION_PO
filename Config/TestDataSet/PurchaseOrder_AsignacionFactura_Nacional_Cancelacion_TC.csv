@@ -1,0 +1,120 @@
+﻿Step Number,Description (Design Steps),Comentarios / Inputs,,,
+1,Dentro del SFTP dirigirse a la <<RUTA>>,cd /cacheJAVA/recibidos_uat/,Se muestra la carpeta correctamente.,,
+2,Press Enter,Enter,,,
+3,Ingresar archivo de factura INVALIDA INV en la carpeta de la ruta.,subir_factura_invalida,El archivo se sube correctamente.,,
+4,Teclear input ,Enter,,,
+5,salir de sftp,exit,,,
+6,Teclear input ,Enter,,,
+7,iniciar sesion en SGE con usuario con permisos,login_adm_sge,Inicia sesion en SGE correctamente,,
+8,Ejecutar JOB FACTURAS,"bash procesa_EDI.sh ""REC_INVOICE_TXT""","El job se ejecuta correctamente.
+",,
+9,Press Enter,Enter,,,
+10,tiempo fuera,20 segundos,,,
+11,validar ejecucion del job,validar_job_pend,,,
+12,dirigirse a la <<RUTA>>,cd automation,,,
+13,Press Enter,Enter,,,
+14,Teclear input,principaluat02,,,
+15,Press Enter,Enter,Menu de sucursales,,
+16,tiempo fuera,2 segundos,,,
+17,Seleccionar <<Sucursal>>,12,"La sucursal seleccionada se pinta de color
+",,
+18,Teclear input ,Enter,"1) Mantenimiento al Sistema
+2)Inventarios
+3)Clientes
+4)Pedidos - Facturacion
+5) Cuentas por cobrar
+6) Pedidos a proveedores
+7)Contabilidad General
+8) Documentos por pagar",,
+19,Seleccionar <<OPCION MENU>>,2,Se visualiza la opcion del menu en la parte inferior,,
+20,Teclear input ,Enter,"Se visualiza el menu:
+1)Parametros
+2)Altas, cambios a articulos
+3) Consultas a Articulus
+4) Movimientos
+5)Control de precios
+6)Reportes
+7)Eliminacion de codigos obsoletos
+8)Cierre de Periodo
+9)Inventarios Fisicos",,
+21,Seleccionar <<OPCION MENU>>,4,Se visualiza la opcion del menu en la parte inferior,,
+22,Teclear input ,Enter,"Se visualiza el menu :
+1) Definicion de movimientos
+2) Carga de movimientos
+3)Traspasos a sucursales
+4) Recepcion de traspasos
+5)Cancelacion de traspasos
+6)Consulta a traspasos
+7) Compra de consignacion
+8)Mant. A central de compras
+9)Carga XML de proveedor
+10)Ordenes de compra.",,
+23,Seleccionar <<OPCION MENU>>,10,Se visualiza la opcion del menu en la parte inferior,,
+24,Teclear input ,Enter,"Se visualiza el menu:
+1)Alta de Ordenes de Compras
+2)Consultar, Editar y Cancelar Ordenes de Compras
+3)Relacionar Orden de Compra con Factura
+4)Carga Masiva Manual de Articulos de la Factura
+5)Asociacion de papeleta, pedimento y factura
+6)Facturas en Revision
+7)Modificar Cantidades Recibidas en Facturass
+8)Relacionar Factura con Papeleta",,
+25,Seleccionar <<OPCION MENU>>,6,"Se muestra la pantalla Facturas en Revision:
+FACTURA | Div | #ORDEN DE COMPRA | SEC | TIPO DE ERROR
+La informacion: 
+Numero de factura | Div |Numero de orden de compra | Sec | Tipo de error
+Comprador | Proveedor | Sucursal
+Y los comandos utiles.",,
+26,,ctrl+b,"Se mostrara una pantalla de cancelación con la leyenda:
+""CANCELACION DE FACTURA La factura [] de la orden [] tiene Dif. Cantidades favor de revisar las inconsistencias por cada articulo. Capture su Login para Cancelar.""  
+Login []
+y comando para salir.",,
+27,escribir usuario adm,grejudl,"El usuario se ingresa correctamente en ""Login [ ] """,,1
+28,Press Enter,Enter,"Se muestra la leyenda ""Notificaciones enviadas por email correctamente""",,2
+29,Press Enter,Enter,"Se cierra la ventana de autorización de la cancelación y se muestra la leyenda ""Factura cancelada correctamente""",,3
+30,Press Enter,Enter,No se visualiza la informacion de la factura en la pantalla Facturas en revision,,4
+31,"Presionar la combinacion de teclas: ""Ctrl + a""",ctrl+a,"Se visualiza el menu:
+1)Alta de Ordenes de Compras
+2)Consultar, Editar y Cancelar Ordenes de Compras
+3)Relacionar Orden de Compra con Factura
+4)Carga Masiva Manual de Articulos de la Factura
+5)Asociacion de papeleta, pedimento y factura
+6)Facturas en Revision
+7)Modificar Cantidades Recibidas en Facturass
+8)Relacionar Factura con Papeleta
+Opcion : []",,5
+32,tiempo fuera,2 segundos,,,6
+33,Seleccionar <<OPCION MENU>>,2,"Se visualiza el menu de Ordenes de Compra:
+Orden de Compra []
+Factura[]
+Papeleta[]
+
+Linea-Codigo... []
+CEDI/Sucursal..[]
+DSO…............[]
+Proveedor..[]
+Marca…...[]
+Categoria…[]
+Tipo de Producto..[]
+Agente Aduanal..[]
+Comprador..[]
+Fechas….[]
+Estatus..[]
+Empresa Compradora..[]
+Procedencia...[]
+
+Y los comandos que se pueden utilizar.",,7
+34,Abrir y copiar contenido de archivo <<Arcivo INV-ordenCompra.txt>>,pegar_num_po,Se copia correctamente el numero de PO.,,8
+35,Teclear input ,Enter,"Se muestra un mensaje :
+Los datos capturados son correctos?... No",,9
+36,Teclear input ,s,"El mensaje cambia a : 
+Los datos capturados son correctos?... Si",,10
+37,Teclear input ,Enter,"La orden de compra tiene estatus ""CANCELADA COMPRAS""  
+Se muestra la pantalla de consulta con los datos:
+#Orden de compra | SEC | Estatus | Importe | Proveedor | R
+La informacion: 
+Numero de PO | Secuencia 000 y 001 | CANCELADA COMPRAS | Numero de importe | Nombre Proveedor | 
+
+Empresa Compradora | Proveedor | Moneda | Desglosar DSO [SI NO ] 
+
+Y los comandos utiles.",,36

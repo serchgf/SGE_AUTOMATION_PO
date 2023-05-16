@@ -1,0 +1,205 @@
+﻿Step Number,Description (Design Steps),Comentarios / Inputs,Expected Result (Design Steps),
+1,Teclear input ,Enter,"Se muestra el menu de SGE: 
+Se muestra la fecha actual, el titulo : ""Menu de Empresas"" y el usuario del sistema.
+Con los menus: 
+1) Impulsora de Refac.
+2)Tophol
+3)Mayoreo de Autopartes
+4)OM Leader
+5)Leader Connection
+6)Agencia Vendedora
+7)Grupo Transportista
+8)OfTrec
+9)SalesTrec
+10)WareTrec
+11)Technorly
+
+Y los comandos que se pueden utilizar.",
+2,Teclear input ,Enter,"Se muestra el menu de SGE: 
+Se muestra la fecha actual, el titulo : ""Menu de Sucursales"" y el usuario del sistema.
+
+Se muestran todas las sucursales disponibles.",
+3,Seleccionar <<Sucursal>>,12,"La sucursal seleccionada se pinta de color.
+",
+4,Teclear input ,Enter,"Se muestra el menu de SGE: 
+Se muestra la fecha actual, el titulo : ""Menu de Atencion a Usuarios"" y el usuario del sistema.
+Con los menus:
+ 1) Mantenimiento al Sistema
+2)Inventarios
+3)Clientes
+4)Pedidos - Facturacion
+5) Cuentas por cobrar
+6) Pedidos a proveedores
+7)Contabilidad General
+8) Documentos por pagar
+
+Y los comandos que se pueden utilizar.",
+5,Seleccionar <<OPCION MENU>>,2,Se visualiza la opcion del menu en la parte inferior,
+6,Teclear input ,Enter,"Se muestra el menu de SGE: 
+Se muestra la fecha actual, el titulo : ""I N V E N T A R I O S"" y el usuario del sistema.
+Con los menus: 
+1)Parametros
+2)Altas, cambios a articulos
+3) Consultas a Articulus
+4) Movimientos
+5)Control de precios
+6)Reportes
+7)Eliminacion de codigos obsoletos
+8)Cierre de Periodo
+9)Inventarios Fisicos
+
+Y los comandos que se pueden utilizar.",
+7,Seleccionar <<OPCION MENU>>,4,Se visualiza la opcion del menu en la parte inferior,
+8,Teclear input ,Enter,"Se muestra el menu de SGE: 
+Se muestra la fecha actual, el titulo : ""M O V I M I E N T O S"" y el usuario del sistema.
+Con los menus: 
+1) Definicion de movimientos
+2) Carga de movimientos
+3)Traspasos a sucursales
+4) Recepcion de traspasos
+5)Cancelacion de traspasos
+6)Consulta a traspasos
+7) Compra de consignacion
+8)Mant. A central de compras
+9)Carga XML de proveedor
+10)Ordenes de compra.
+
+Y los comandos que se pueden utilizar.",
+9,Seleccionar <<OPCION MENU>>,10,Se visualiza la opcion del menu en la parte inferior,
+10,Teclear input ,Enter,"Se muestra el menu de SGE: 
+Se muestra la fecha actual, el titulo : ""ORDENES DE COMPRA"" y el usuario del sistema.
+Con los menus: 
+1)Alta de Ordenes de Compras
+2)Consultar, Editar y Cancelar Ordenes de Compras
+3)Relacionar Orden de Compra con Factura
+4)Carga Masiva Manual de Articulos de la Factura
+5)Asociacion de papeleta, pedimento y factura
+6)Facturas en Revision
+7)Modificar Cantidades Recibidas en Facturass
+8)Relacionar Factura con Papeleta
+
+La opcion y los comandos que se pueden utilizar.",
+11,Seleccionar <<OPCION MENU>>,1,"Se muestran los datos en el encabezado
+SGE, Fecha, Mayoreo Autopartes y Aceites , grupo 
+y en el cuerpo:
+
+#Orden de Compra
+Estatus
+Proveedor
+Prov. Origen
+Embarcar a CEDI [<<Numero de sucursal>>][<<Nombre de Sucursal>>]
+Comprador[<<Usuario>>]
+Empresa compradora [<<Empresa_Compradora>>] 
+Fecha estimada de Entrega
+Desglosar DSO
+Fecha de alta
+Dias Plazo de Pago
+Moneda
+Comentarios
+Mantiene BackOrder
+Dias Plazo
+
+La opcion a teclear, y en el pie de pagina:
+El nombre de usuario y los comandos que se pueden utilizar
+",
+12,"Situarse en Proveedor y dar click en la combinacion ""Ctrl + E""",ctrl+e,"Se muestra una lista con la informacion de el proveedor :
+Lista de proveedores
+Nombre proveedor abreviado
+
+Los comandos que se pueden utilizar",
+13,Teclear primeras letras del proveedor configurado <<Proveedor>>,TENNECO,Se precarga el nombre del proveedor,
+14,Teclear input ,Enter,"Se precarga la informacion del proveedor:
+Proveedor y su Nombre
+Fecha estimada Entrega
+Desglosar DSO
+Moneda",
+15,"Situarse en ""Desglosar DSO"" presionando la tecla ""tab"" 4 veces",tab,,
+16,Teclear input ,tab,,
+17,Teclear input ,tab,,
+18,Teclear input ,tab,"El cursor se posiciona en en renglon ""Desglosar DSO""",
+19,Teclear input ,n,"El cursor cambia a el renglon ""Tipo de moneda"" y se visualiza en el renglon de ""Desglosar DSO"" la palabra ""NO"".",
+20,"Presionar la combinacion de teclas: ""Ctrl + W""",ctrl+w,"Se muestra la pantalla :
+AUTORIZAR CAMBIO EN DESGLOSE DE DSO
+Modificado de ""SI"" a ""NO"" desglosar DSO
+Favor de ingresar la autorizacion para continuar.
+Login []
+Los comandos que se pueden utilizar",
+21,Ingresar en Login el <<UsarioCompras>>,sfabian,"El usuario se ingresa correctamente en ""Login [ ] """,
+22,Teclear input ,Enter,"Se muestra la pantalla de ""Carga Masiva de Ordenes de compra de <<Proveedor>> y en la cabezera se mostrara:
+Fecha, Usuario, sucursal y grupo.
+En el cuerpo aparacera :
+Errores 
+Linea Codigo
+Cantidad
+Precio unitario
+Y en la parte del footer apareceran los comandos utiles para la pantalla.",
+23,Abrir y copiar contenido de archivo <<Datos_productos_po.xlsx>>,leer_archivo,Se copia correctamente el contenido del archivo al portapapeles.,
+24,"Presionar la combinacion de teclas: ""Ctrl + W""",ctrl+w,"Se muestra en pantalla de ""Carga Masiva de Ordenes de compra""
+Errores
+Lin
+Codigo
+Cantidad
+Precio Unitario
+St
+ En la parte inferior se muestra el total y la descripcion
+",
+25,"Presionar la combinacion de teclas: ""Ctrl + W""",ctrl+w,"Se mostrara una pantalla de autorizacion con la leyenda:
+""Para continuar es necesario que capture la siguiente informacion""  
+Login: []
+y comando para salir.",
+26,Ingresar en Login de el <<Usuario>>,sfabian,"El usuario se ingresa correctamente en ""Login [ ] """,
+27,Teclear input ,Enter,,
+28,"Presionar la combinacion de teclas: ""Ctrl + W""",ctrl+w,Se muestra la pantalla con los nuevos valores agregados.,
+29,"Presionar la combinacion de teclas: ""Ctrl + W""",ctrl+w,Se muestra una notificacion en la seccion inferior avisando que los datos han sido guardados.,
+30,Seleccionar la Orden de compra dando input,doubleclick,El numero de orden de compra se copia al portapapeles.,
+31,Teclear input ,Enter,,
+32,Teclear input ,2,"Se visualiza el menu de Ordenes de Compra:
+Orden de Compra []
+Factura[]
+Papeleta[]
+
+Linea-Codigo... []
+CEDI/Sucursal..[]
+DSO…............[]
+Proveedor..[]
+Marca…...[]
+Categoria…[]
+Tipo de Producto..[]
+Agente Aduanal..[]
+Comprador..[]
+Fechas….[]
+Estatus..[]
+Empresa Compradora..[]
+Procedencia...[]
+
+Y los comandos que se pueden utilizar.",
+33,Situarse en la orden de compra e ingresar el numero de PO.,rclick,Se copia correctamente el numero de PO.,
+34,Teclear input ,Enter,"Se muestra un mensaje :
+Los datos capturados son correctos?... No",
+35,Teclear input ,s,"El mensaje cambia a : 
+Los datos capturados son correctos?... Si",
+36,Teclear input ,Enter,"Se muestra la pantalla de consulta con los datos:
+#Orden de compra | SEC | Estatus | Importe | Proveedor | R
+La informacion: 
+Numero de PO | Secuencia 000 |Autorizadaa | Numero de importe | Nombre Proveedor | 
+
+Empresa Compradora | Proveedor | Moneda | Desglosar DSO [SI NO ] 
+
+Y los comandos utiles.",
+37,"Presionar la combinacion de teclas: ""Ctrl + K""",ctrl+k,"Se muestra una pantalla 
+""MARCAR ORDEN COMO ""COLOCADO"" ""
+Numero de PO
+Estatus Actual : AUTORIZADA
+Login [ ]
+Y los comandos utiles.",
+38,Ingresar en Login el <<UsarioCompras>>,sfabian,"El usuario se ingresa correctamente en ""Login [ ] """,
+39,Teclear input ,Enter,"Se regresa a la ventana principal con el estatus ""COLOCADA""",PROBABLEMENTE EXISTA UN DELAY AL MOSTRAR VENTANA
+40,tiempo_espera,5 segundos,,
+41,"Presionar la combinacion de teclas: ""Ctrl + K""",ctrl+k,"Se muestra una pantalla 
+""MARCAR ORDEN COMO ""CONFIRMADO"" ""
+Numero de PO
+Estatus Actual : COLOCADA
+Login [ ]
+Y los comandos utiles.",
+42,Ingresar en Login el <<UsarioCompras>>,sfabian,"El usuario se ingresa correctamente en ""Login [ ] """,
+43,Teclear input ,Enter,"Se regresa a la ventana principal con el estatus ""CONFIRMADA""",

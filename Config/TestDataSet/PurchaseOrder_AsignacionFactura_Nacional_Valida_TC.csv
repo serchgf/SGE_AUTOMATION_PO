@@ -1,0 +1,106 @@
+﻿Step Number,Description (Design Steps),Comentarios / Inputs,Expected Result (Design Steps)
+1,Dentro del SFTP dirigirse a la <<RUTA>>,cd /cacheJAVA/recibidos_uat/,Se muestra la carpeta correctamente.
+2,Press Enter,Enter,
+3,Ingresar archivo de factura INV en la carpeta de la ruta.,subir_archivo,El archivo se sube correctamente.
+4,Press Enter,Enter,cerrar la sesion sftp
+5,salir de sftp,exit,
+6,Press Enter,Enter,
+7,iniciar sesion en SGE con usuario con permisos,login_adm_sge,Inicia sesion en SGE correctamente
+8,Ejecutar JOB FACTURAS,"bash procesa_EDI.sh ""REC_INVOICE_TXT""",
+9,Press Enter,Enter,
+10,tiempo fuera,20 segundos,
+11,cerrar sesion de adm_sge,exit,
+12,Press Enter,Enter,
+13,tiempo fuera,2 segundos,
+14,Ingresar a SGE con las credenciales <<User>> <Password>>,login_sge,"1 - Reportes e impresoras
+2- Cambio de clave de acceso
+3- Entrar a sistema comercial
+4- Salir del servidor"
+15,Teclear input ,Enter,"1) Impulsora de Refac.
+2)Tophol
+3)Mayoreo de Autopartes
+4)OM Leader
+5)Leader Connection
+6)Agencia Vendedora
+7)Grupo Transportista
+8)OfTrec
+9)SalesTrec
+10)WareTrec
+11)Technorly"
+16,Teclear input ,Enter,Menu de sucursales
+17,Seleccionar <<Sucursal>>,12,"La sucursal seleccionada se pinta de color
+"
+18,Teclear input ,Enter,"1) Mantenimiento al Sistema
+2)Inventarios
+3)Clientes
+4)Pedidos - Facturacion
+5) Cuentas por cobrar
+6) Pedidos a proveedores
+7)Contabilidad General
+8) Documentos por pagar"
+19,Seleccionar <<OPCION MENU>>,2,Se visualiza la opcion del menu en la parte inferior
+20,Teclear input ,Enter,"Se visualiza el menu:
+1)Parametros
+2)Altas, cambios a articulos
+3) Consultas a Articulus
+4) Movimientos
+5)Control de precios
+6)Reportes
+7)Eliminacion de codigos obsoletos
+8)Cierre de Periodo
+9)Inventarios Fisicos"
+21,Seleccionar <<OPCION MENU>>,4,Se visualiza la opcion del menu en la parte inferior
+22,Teclear input ,Enter,"Se visualiza el menu :
+1) Definicion de movimientos
+2) Carga de movimientos
+3)Traspasos a sucursales
+4) Recepcion de traspasos
+5)Cancelacion de traspasos
+6)Consulta a traspasos
+7) Compra de consignacion
+8)Mant. A central de compras
+9)Carga XML de proveedor
+10)Ordenes de compra."
+23,Seleccionar <<OPCION MENU>>,10,Se visualiza la opcion del menu en la parte inferior
+24,Teclear input ,Enter,"Se visualiza el menu:
+1)Alta de Ordenes de Compras
+2)Consultar, Editar y Cancelar Ordenes de Compras
+3)Relacionar Orden de Compra con Factura
+4)Carga Masiva Manual de Articulos de la Factura
+5)Asociacion de papeleta, pedimento y factura
+6)Facturas en Revision
+7)Modificar Cantidades Recibidas en Facturass
+8)Relacionar Factura con Papeleta"
+25,Seleccionar <<OPCION MENU>>,2,"Se visualiza el menu de Ordenes de Compra:
+Orden de Compra []
+Factura[]
+Papeleta[]
+
+Linea-Codigo... []
+CEDI/Sucursal..[]
+DSO…............[]
+Proveedor..[]
+Marca…...[]
+Categoria…[]
+Tipo de Producto..[]
+Agente Aduanal..[]
+Comprador..[]
+Fechas….[]
+Estatus..[]
+Empresa Compradora..[]
+Procedencia...[]
+
+Y los comandos que se pueden utilizar."
+26,Situarse en la orden de compra e ingresar el numero de PO.,pegar_num_po,Se copia correctamente el numero de PO.
+27,Teclear input ,Enter,"Se muestra un mensaje :
+Los datos capturados son correctos?... No"
+28,Teclear input ,S,"El mensaje cambia a : 
+Los datos capturados son correctos?... Si"
+29,Teclear input ,Enter,"Se muestra la pantalla de consulta con los datos:
+#Orden de compra | SEC | Estatus | Importe | Proveedor | R
+La informacion: 
+Numero de PO | Secuencia 000 y 001 | En Transito | Numero de importe | Nombre Proveedor | 
+
+Empresa Compradora | Proveedor | Moneda | Desglosar DSO [SI NO ] 
+
+Y los comandos utiles."

@@ -1,0 +1,136 @@
+﻿,Step Number,Description (Design Steps),Comentarios / Inputs,Expected Result (Design Steps),,,
+1,Dentro del SFTP dirigirse a la <<RUTA>>,cd /cacheJAVA/recibidos_uat/,Se muestra la carpeta correctamente.,,,,
+2,Press Enter,Enter,,,,,
+3,Ingresar archivo de factura INVALIDA INV en la carpeta de la ruta.,subir_factura_invalida,El archivo se sube correctamente.,,,,
+4,Press Enter,Enter,,,,,
+5,salir de sftp,exit,,,,,
+6,Press Enter,Enter,,,,,
+7,iniciar sesion en SGE con usuario con permisos,login_adm_sge,Inicia sesion en SGE correctamente,,,,
+8,Ejecutar JOB FACTURAS,"bash procesa_EDI.sh ""REC_INVOICE_TXT""","El job se ejecuta correctamente.
+",PROBABLEMENTE EXISTA UN DELAY EN LO QUE SE EJECUTA EL JOB,,,
+9,Press Enter,Enter,,,,,
+10,tiempo fuera,20 segundos,,,,,
+11,validar ejecucion del job,validar_job,,,,,
+12,cerrar sesion de adm_sge,exit,,,,,
+13,Press Enter,Enter,,,,,
+14,tiempo fuera,2 segundos,,,,,
+15,Ingresar a SGE con las credenciales <<User>> <Password>>,login_sge,"1 - Reportes e impresoras
+2- Cambio de clave de acceso
+3- Entrar a sistema comercial
+4- Salir del servidor",PROBABLEMENTE EXISTA UN DELAY AL MOSTRAR VENTANA,,,
+16,Teclear input ,Enter,"1) Impulsora de Refac.
+2)Tophol
+3)Mayoreo de Autopartes
+4)OM Leader
+5)Leader Connection
+6)Agencia Vendedora
+7)Grupo Transportista
+8)OfTrec
+9)SalesTrec
+10)WareTrec
+11)Technorly",,,,
+17,Teclear input ,Enter,Menu de sucursales,,,,
+18,Seleccionar <<Sucursal>>,12,"La sucursal seleccionada se pinta de color
+",,,,
+19,Teclear input ,Enter,"1) Mantenimiento al Sistema
+2)Inventarios
+3)Clientes
+4)Pedidos - Facturacion
+5) Cuentas por cobrar
+6) Pedidos a proveedores
+7)Contabilidad General
+8) Documentos por pagar",,,,
+20,Seleccionar <<OPCION MENU>>,2,Se visualiza la opcion del menu en la parte inferior,,,,
+21,Teclear input ,Enter,"Se visualiza el menu:
+1)Parametros
+2)Altas, cambios a articulos
+3) Consultas a Articulus
+4) Movimientos
+5)Control de precios
+6)Reportes
+7)Eliminacion de codigos obsoletos
+8)Cierre de Periodo
+9)Inventarios Fisicos",,,,
+22,Seleccionar <<OPCION MENU>>,4,Se visualiza la opcion del menu en la parte inferior,,,,
+23,Teclear input ,Enter,"Se visualiza el menu :
+1) Definicion de movimientos
+2) Carga de movimientos
+3)Traspasos a sucursales
+4) Recepcion de traspasos
+5)Cancelacion de traspasos
+6)Consulta a traspasos
+7) Compra de consignacion
+8)Mant. A central de compras
+9)Carga XML de proveedor
+10)Ordenes de compra.",,,,
+24,Seleccionar <<OPCION MENU>>,10,Se visualiza la opcion del menu en la parte inferior,,,,
+25,Teclear input ,Enter,"Se visualiza el menu:
+1)Alta de Ordenes de Compras
+2)Consultar, Editar y Cancelar Ordenes de Compras
+3)Relacionar Orden de Compra con Factura
+4)Carga Masiva Manual de Articulos de la Factura
+5)Asociacion de papeleta, pedimento y factura
+6)Facturas en Revision
+7)Modificar Cantidades Recibidas en Facturass
+8)Relacionar Factura con Papeleta",,,,
+26,Seleccionar <<OPCION MENU>>,6,"Se muestra la pantalla Facturas en Revision:
+FACTURA | Div | #ORDEN DE COMPRA | SEC | TIPO DE ERROR
+La informacion: 
+Numero de factura | Div |Numero de orden de compra | Sec | Tipo de error
+Comprador | Proveedor | Sucursal
+Y los comandos utiles.",,,,
+27,Hacer la busqueda de la factura en la pantalla pegando el numero de factura en el campo factura,pegar_num_inv_po,,,,,
+28,,ctrl+r,"Se muestra la pantalla de ordenes de compra con los datos:
+Orden [] Factura [] [] Comprador [] Proveedor [] []
+La informacion: 
+Alm | Lin |Codigo | Valor unitario | Cant. Fact. | Cant. Acept. | Error | P
+Se mostrará el listado de artículos de la factura.
+Desc. Error [] Moneda []
+
+Y los comandos utiles.",,,,opcional
+29,,ctrl+k,"Se mostrara una pantalla de autorizacion con la leyenda:
+""ACEPTAR MASIVAMENTE TODAS LAS DIFERENCIAS DE LA FACTURA EN REVISION Para terminar el proceso de revision y dar como 'valida' esta factura es necesario que ingrese su login para continuar""  
+Login []
+Autorizacion []
+y comando para salir.",,TOMAR CAPTURA,TOMAR CAPTURA,
+30,escribir usuario adm,grejudl,,,,,
+31,Teclear input ,Enter,,,,,
+32,escribir autorizacion adm,123,,,,,
+33,Teclear input ,Enter,"Se visualiza la leyenda ""Se acepto la revision de la factura correctamente""",,,,
+34,Teclear input ,Enter,No se visualiza la informacion de la factura en la pantalla Facturas en revision,,,,
+35,tiempo fuera,2 segundos,,,,,
+36,"Presionar la combinacion de teclas: ""Ctrl + a""",ctrl+a,"Se visualiza el menu:
+1)Alta de Ordenes de Compras
+2)Consultar, Editar y Cancelar Ordenes de Compras
+3)Relacionar Orden de Compra con Factura
+4)Carga Masiva Manual de Articulos de la Factura
+5)Asociacion de papeleta, pedimento y factura
+6)Facturas en Revision
+7)Modificar Cantidades Recibidas en Facturass
+8)Relacionar Factura con Papeleta
+Opcion : []",,,,
+37,tiempo fuera,2 segundos,,,,,
+38,Seleccionar <<OPCION MENU>>,2,"Se visualiza el menu de Ordenes de Compra:
+Orden de Compra []
+Factura[]
+Papeleta[]
+
+Linea-Codigo... []
+CEDI/Sucursal..[]
+DSO…............[]
+Proveedor..[]
+Marca…...[]
+Categoria…[]
+Tipo de Producto..[]
+Agente Aduanal..[]
+Comprador..[]
+Fechas….[]
+Estatus..[]
+Empresa Compradora..[]
+Procedencia...[]
+
+Y los comandos que se pueden utilizar.",,,,
+39,Abrir y copiar contenido de archivo <<Arcivo INV-ordenCompra.txt>>,pegar_num_po,,,,,
+40,Teclear input ,Enter,,,,,
+41,Teclear input ,s,,,,,
+42,Teclear input ,Enter,,,,,
